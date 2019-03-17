@@ -4,14 +4,12 @@
 #
 Name     : R-sn
 Version  : 1.5.3
-Release  : 16
+Release  : 17
 URL      : https://cran.r-project.org/src/contrib/sn_1.5-3.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/sn_1.5-3.tar.gz
 Summary  : The Skew-Normal and Related Distributions Such as the Skew-t
 Group    : Development/Tools
 License  : GPL-2.0 GPL-3.0
-Requires: R-mnormt
-Requires: R-numDeriv
 BuildRequires : R-mnormt
 BuildRequires : R-numDeriv
 BuildRequires : buildreq-R
@@ -29,10 +27,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1541733768
+export SOURCE_DATE_EPOCH=1552797568
 
 %install
-export SOURCE_DATE_EPOCH=1541733768
+export SOURCE_DATE_EPOCH=1552797568
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -68,8 +66,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library sn|| : 
-cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
+R CMD check --no-manual --no-examples --no-codoc  sn || :
 
 
 %files
