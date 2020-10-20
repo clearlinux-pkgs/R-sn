@@ -4,7 +4,7 @@
 #
 Name     : R-sn
 Version  : 1.6.2
-Release  : 33
+Release  : 34
 URL      : https://cran.r-project.org/src/contrib/sn_1.6-2.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/sn_1.6-2.tar.gz
 Summary  : The Skew-Normal and Related Distributions Such as the Skew-t
